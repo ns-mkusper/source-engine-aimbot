@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{062d45ee-520d-4bb7-bc04-402af69cbbe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{3b64e10b-9dc9-4c51-b701-c027564d4e6c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="netvar.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="halflife2.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="memorytools.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtils.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="CVMTHook.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="needed.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="extrafunctions.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="weaponlist.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\public\mathlib\mathlib.h" />
+    <ClInclude Include="netvars.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="aimbot.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntity\CPlayer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="inlines.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="halflife2.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="memorytools.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="CUtils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="client.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="needed.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\public\vgui_controls\vgui_controls.cpp" />
+    <ClCompile Include="SDK\public\tier0\memoverride.cpp" />
+    <ClCompile Include="SDK\tier1\checksum_crc.cpp" />
+    <ClCompile Include="aimbot.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\public\collisionutils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="missing.h">
+      <Filter>header</Filter>
+    </None>
+  </ItemGroup>
+</Project>

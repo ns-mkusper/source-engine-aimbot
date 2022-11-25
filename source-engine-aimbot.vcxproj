@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aimbot.h" />
+    <ClInclude Include="CEntity\CPlayer.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="CUtils.h" />
+    <ClInclude Include="CVMTHook.h" />
+    <ClInclude Include="extrafunctions.h" />
+    <ClInclude Include="halflife2.h" />
+    <ClInclude Include="inlines.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="memorytools.h" />
+    <ClInclude Include="needed.h" />
+    <ClInclude Include="netvar.h" />
+    <ClInclude Include="netvars.h" />
+    <ClInclude Include="sdk.h" />
+    <ClInclude Include="SDK\public\mathlib\mathlib.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="weaponlist.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aimbot.cpp" />
+    <ClCompile Include="client.cpp" />
+    <ClCompile Include="CUtils.cpp" />
+    <ClCompile Include="halflife2.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="memorytools.cpp" />
+    <ClCompile Include="needed.cpp" />
+    <ClCompile Include="SDK\public\collisionutils.cpp" />
+    <ClCompile Include="SDK\public\tier0\memoverride.cpp" />
+    <ClCompile Include="SDK\public\vgui_controls\vgui_controls.cpp" />
+    <ClCompile Include="SDK\tier1\checksum_crc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="missing.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>nego</ProjectName>
+    <ProjectGuid>{2A862C4F-F5FE-42EC-AE7E-CC9DB82C2FC6}</ProjectGuid>
+    <RootNamespace>source-engine-aimbot</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\boost\boost_1_48_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_46_1;SDK;SDK/_UpgradeReport_Files;SDK/common;SDK/common/GameUI;SDK/common/xbox;SDK/devtools;SDK/devtools/bin;SDK/dx10sdk;SDK/dx10sdk/Utilities;SDK/dx10sdk/Utilities/dx9_30;SDK/dx9sdk;SDK/dx9sdk/utilities;SDK/game;SDK/game/client;SDK/game/client/episodic;SDK/game/client/game_controls;SDK/game/client/hl2;SDK/game/client/hl2mp;SDK/game/client/hl2mp/ui;SDK/game/client/sdk;SDK/game/client/sdk/vgui;SDK/game/server;SDK/game/server/episodic;SDK/game/server/hl2;SDK/game/server/hl2mp;SDK/game/server/sdk;SDK/game/shared;SDK/game/shared/Multiplayer;SDK/game/shared/episodic;SDK/game/shared/hl2;SDK/game/shared/hl2mp;SDK/game/shared/sdk;SDK/lib;SDK/lib/linux;SDK/lib/public;SDK/linux_sdk;SDK/materialsystem;SDK/materialsystem/shaderapidx9;SDK/materialsystem/shaderlib;SDK/materialsystem/stdshaders;SDK/mathlib;SDK/public;SDK/public/Friends;SDK/public/Friends/AddOns;SDK/public/SoundEmitterSystem;SDK/public/VGuiMatSurface;SDK/public/appframework;SDK/public/avi;SDK/public/bitmap;SDK/public/datacache;SDK/public/datamodel;SDK/public/demofile;SDK/public/dmserializers;SDK/public/dmxloader;SDK/public/engine;SDK/public/filesystem;SDK/public/g15;SDK/public/game;SDK/public/game/client;SDK/public/game/server;SDK/public/inputsystem;SDK/public/jpeglib;SDK/public/keyframe;SDK/public/materialsystem;SDK/public/mathlib;SDK/public/matsys_controls;SDK/public/maya;SDK/public/maya/ValveMaya;SDK/public/mdllib;SDK/public/p4lib;SDK/public/particles;SDK/public/phonemeextractor;SDK/public/scenefilecache;SDK/public/shaderapi;SDK/public/shaderlib;SDK/public/soundsystem;SDK/public/steam;SDK/public/tier0;SDK/public/tier1;SDK/public/tier2;SDK/public/tier3;SDK/public/toolframework;SDK/public/tools;SDK/public/unicode;SDK/public/unitlib;SDK/public/vaudio;SDK/public/vgui;SDK/public/vgui_controls;SDK/public/vphysics;SDK/public/vstdlib;SDK/public/vtf;SDK/public/zip;SDK/tier1;SDK/utils;SDK/utils/captioncompiler;SDK/utils/common;SDK/utils/demoinfo;SDK/utils/glview;SDK/utils/height2normal;SDK/utils/motionmapper;SDK/utils/nvtristriplib;SDK/utils/phonemeextractor;SDK/utils/qc_eyes;SDK/utils/qc_eyes/res;SDK/utils/serverplugin_sample;SDK/utils/smdlexp;SDK/utils/tgadiff;SDK/utils/vbsp;SDK/utils/vice;SDK/utils/vmpi;SDK/utils/vprojtomake;SDK/utils/vrad;SDK/utils/vrad_launcher;SDK/utils/vtf2tga;SDK/utils/vtfdiff;SDK/utils/vvis;SDK/utils/vvis_launcher;SDK/utils/xwad;SDK/vgui2;SDK/vgui2/vgui_controls;SDK/vmpi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SOURCE_ENGINE_AIMBOT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>libc;libcmtd;libcd;</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>C:\Users\nego\Documents\source-engine-aimbot\CEntity;SDK/vgui2/vgui_controls;Include;C:\Program Files\boost\boost_1_48_0;SDK;SDK/_UpgradeReport_Files;SDK/common;SDK/common/GameUI;SDK/common/xbox;SDK/devtools;SDK/devtools/bin;SDK/dx10sdk;SDK/dx10sdk/Utilities;SDK/dx10sdk/Utilities/dx9_30;SDK/dx9sdk;SDK/dx9sdk/utilities;SDK/game;SDK/game/client;SDK/game/client/episodic;SDK/game/client/game_controls;SDK/game/client/hl2;SDK/game/client/hl2mp;SDK/game/client/hl2mp/ui;SDK/game/client/sdk;SDK/game/client/sdk/vgui;SDK/game/server;SDK/game/server/episodic;SDK/game/server/hl2;SDK/game/server/hl2mp;SDK/game/server/sdk;SDK/game/shared;SDK/game/shared/Multiplayer;SDK/game/shared/episodic;SDK/game/shared/hl2;SDK/game/shared/hl2mp;SDK/game/shared/sdk;SDK/lib;SDK/lib/linux;SDK/lib/public;SDK/linux_sdk;SDK/materialsystem;SDK/materialsystem/shaderapidx9;SDK/materialsystem/shaderlib;SDK/materialsystem/stdshaders;SDK/mathlib;SDK/public;SDK/public/Friends;SDK/public/Friends/AddOns;SDK/public/SoundEmitterSystem;SDK/public/VGuiMatSurface;SDK/public/appframework;SDK/public/avi;SDK/public/bitmap;SDK/public/datacache;SDK/public/datamodel;SDK/public/demofile;SDK/public/dmserializers;SDK/public/dmxloader;SDK/public/engine;SDK/public/filesystem;SDK/public/g15;SDK/public/game;SDK/public/game/client;SDK/public/game/server;SDK/public/inputsystem;SDK/public/jpeglib;SDK/public/keyframe;SDK/public/materialsystem;SDK/public/mathlib;SDK/public/matsys_controls;SDK/public/maya;SDK/public/maya/ValveMaya;SDK/public/mdllib;SDK/public/p4lib;SDK/public/particles;SDK/public/phonemeextractor;SDK/public/scenefilecache;SDK/public/shaderapi;SDK/public/shaderlib;SDK/public/soundsystem;SDK/public/steam;SDK/public/tier0;SDK/public/tier1;SDK/public/tier2;SDK/public/tier3;SDK/public/toolframework;SDK/public/tools;SDK/public/unicode;SDK/public/unitlib;SDK/public/vaudio;SDK/public/vgui;SDK/public/vgui_controls;SDK/public/vphysics;SDK/public/vstdlib;SDK/public/vtf;SDK/public/zip;SDK/tier1;SDK/utils;SDK/utils/captioncompiler;SDK/utils/common;SDK/utils/demoinfo;SDK/utils/glview;SDK/utils/height2normal;SDK/utils/motionmapper;SDK/utils/nvtristriplib;SDK/utils/phonemeextractor;SDK/utils/qc_eyes;SDK/utils/qc_eyes/res;SDK/utils/serverplugin_sample;SDK/utils/smdlexp;SDK/utils/tgadiff;SDK/utils/vbsp;SDK/utils/vice;SDK/utils/vmpi;SDK/utils/vprojtomake;SDK/utils/vrad;SDK/utils/vrad_launcher;SDK/utils/vtf2tga;SDK/utils/vtfdiff;SDK/utils/vvis;SDK/utils/vvis_launcher;SDK/utils/xwad;SDK/vgui2;SDK/vmpi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SOURCE_ENGINE_AIMBOT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCPMTD.lib;LIBCMTD.lib;LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
